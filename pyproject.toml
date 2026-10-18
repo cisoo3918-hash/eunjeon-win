@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eunjeon-win"
+version = "0.1.0"
+description = "Windows drop-in for `eunjeon` (Korean MeCab) — makes g2pkk / MeloTTS Korean work on Windows without a C++ build"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "BSD-3-Clause" }
+dependencies = ["python-mecab-ko>=1.3", "python-mecab-ko-dic"]
+classifiers = [
+  "Operating System :: Microsoft :: Windows",
+  "Natural Language :: Korean",
+  "Topic :: Text Processing :: Linguistic",
+]
+
+[tool.setuptools]
+packages = ["eunjeon"]
+
+[tool.setuptools.package-data]
+eunjeon = ["mecabrc"]
